@@ -2,6 +2,7 @@ package com.coolgedu.androidtask
 
 import android.content.res.Configuration
 import android.os.Bundle
+import android.view.View
 import android.widget.ArrayAdapter
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -22,6 +23,8 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        val progressBar = binding.progressBar
+
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
@@ -34,7 +37,12 @@ class MainActivity : AppCompatActivity() {
 
         binding.dropDown.setOnItemClickListener { parent, view, position, id ->
             val selectedItem = parent.getItemAtPosition(position) as String
-            handleSelection(selectedItem)
+            progressBar.visibility = View.VISIBLE
+
+            binding.recyclerView.postDelayed({
+                handleSelection(selectedItem)
+                progressBar.visibility = View.GONE
+            }, 100)
         }
 
         val spanCount: Int = calculateSpanCount()
