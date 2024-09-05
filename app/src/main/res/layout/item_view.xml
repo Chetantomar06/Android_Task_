@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/legends_question_background"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="100dp"
+        app:cardBackgroundColor="@color/number_bg"
+        android:elevation="10dp"
+        app:strokeColor="@color/number_bg"
+        app:strokeWidth="1dp"
+        android:layout_marginBottom="8dp">
+
+        <TextView
+            android:id="@+id/legends_question_no"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:fontFamily="@font/poppins"
+            android:gravity="center"
+            android:text="@string/_1"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+</RelativeLayout>

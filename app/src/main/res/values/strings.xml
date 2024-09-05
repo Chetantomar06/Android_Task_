@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Android Task</string>
+    <string name="drop_down_msg">Please select the patterns from here</string>
+    <string name="_1">1</string>
+
+    <string-array name="pattern">
+        <item>Odd Numbers</item>
+        <item>Even Numbers</item>
+        <item>Prime Numbers</item>
+        <item>Fibonacci Sequence Numbers</item>
+    </string-array>
+
+</resources>
